@@ -1,0 +1,74 @@
+/* 歸零用 */
+/* * {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box; 
+         -box-sizing: border-box;
+} */
+
+/* 底版顏色 */
+body{
+  background : #f3eddb;
+}
+
+/* 全版面數值 */
+#main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 第一行input部分 */
+/* 外框 */
+#write {
+  /* display: block; */
+  /* border: 0; */
+  position: relative;
+  height: 50px;
+}
+
+/* 左至右三區塊 */
+#sel_id {
+  position: absolute;
+  /* margin-left: 13px; */
+  top: 0.5rem;
+}
+
+textarea {
+    position: absolute;
+    margin-left: 56px;
+    height: 2.5rem;
+    width: 400px;
+    border: none;
+}
+
+#input {
+  position: absolute;
+  margin-left: 465px;
+  top: 0.5rem;
+}
+
+/* 各行顯示列外框 */
+#myApp {
+  max-width: 600px;
+}
+/* 各行外框 */
+ul{
+  /* width: 600px; */
+  position: relative;
+}
+
+/* 各行由左至右 */
+input {
+  margin-left: -25px;
+  margin-right: 20px;
+}
+
+span {
+  position: absolute;
+  width: 400px;
+  text-align: center;
+}
+
+ul button {
+  position: absolute;
+  left: 461px;
+}

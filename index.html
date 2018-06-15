@@ -3,19 +3,38 @@
 
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    
+    <title>Graceの待辦事項</title>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="TodoList.css">
+
 </head>
 
 <body>
-    <select id = "sel_id"></select>
-    <textarea rows="3" cols="20"> 可以記錄喔！</textarea>
-    <button type = "button" id = "input">input</button>
-    <div id="myApp">hello</div>
+
+    <div id = "main">
+        <div id = "write">
+            <form>
+                <select id = "sel_id"></select>
+                <textarea> 可以記錄喔！</textarea>
+                <button type = "reset" id = "input">新增/修改</button>
+            </form>>
+        </div>
+        
+        <div id="myApp">hello</div>
+    </div>
+
+     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="TodoList.js"></script>
+    
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript" src="TodoList.js"></script>
+
 </body>
 
 </html>
