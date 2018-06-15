@@ -54,14 +54,7 @@ function get_list() {
             for (var i = list.length - 1; i > -1; i--) {
                 htmlstring += "<hr /><ul>"
                 htmlstring += "<input type=\"checkbox\" id = \"put" + list[i].id + "\"" + " " + "onclick= \"put_list (" + all_data.value[i].finished + "," + list[i].id + ")\"" + "/>"
-
-                htmlstring += "<span id = \"txt" + list[i].id + "\">" + list[i].id + "・" + list[i].content + "</span>";
-                // if (all_data.value[i].finished != 0) {
-                //     console.log("進來了")
-                //     $('#txt' + list[i].id).css("text-decoration", "line-through");
-                //     console.log('#txt' + list[i].id)
-                // }
-
+                htmlstring += "<span id = \"txt" + list[i].id + "\">" + list[i].id + "・" + list[i].content + "</span>";                
                 htmlstring += "<button type = \"button\" id = \"delete" + list[i].id + "\"" + " " + "onclick= \"del_list (" + list[i].id + ")\"" + ">刪除</button>"
                 htmlstring += "</ul>"
             }
@@ -69,6 +62,15 @@ function get_list() {
             // console.log(htmlstring);
             // console.log(list.length);
             $("#myApp").html(htmlstring);
+
+            for (var i = list.length - 1; i > -1; i--) {
+                if (all_data.value[i].finished==1) {
+                    console.log("==> [進入 !checked 的判斷式]");
+                    $('#put' + list[i].id).prop('checked')
+                    $('#txt' + list[i].id).css("text-decoration", "line-through");
+                    $('#put' + list[i].id).prop('checked', true);
+                }
+            }
         }
     })
 }
@@ -94,12 +96,13 @@ function put_list(num, id) {
     console.log("當我點下去時，num:", num, " id:", id);
     //console.log(' ==================SUCCESS================= ');
     //console.log("輸入值onclick= put_list (#txt4,0,4)，此時應為#txt4:"+str)
-    console.log("this 是:" + $(this).id + " 未設定 prop 前之值，此時應為 undefined: " + $(this).prop('checked'));
-    if (!$(this).prop('checked')) {
+    console.log("this 是:" + $(this).index + " 未設定 prop 前之值，此時應為 undefined: " + $(this).prop('checked'));
+    console.log(this)
+    if ($('#put' + id).prop('checked')) {
         console.log("==> [進入 !checked 的判斷式]");
 
         $('#txt' + id).css("text-decoration", "line-through");
-        $(this).prop('checked', true);
+        $('#put' + id).prop('checked', true);
 
         console.log("設值後的值，此時 prop 應為true:" + $(this).prop('checked'));
 
@@ -108,11 +111,11 @@ function put_list(num, id) {
         console.log("輸入時的num，此時 num 應為0:" + num);
         // console.log("被設值後的全域response存檔，應設置為1："+all_data.value[id].finished);
         //console.log(this)
-    } else if ($(this).prop('checked')) {
+    } else if (!$('#put' + id).prop('checked')) {
         console.log("==> ==> [進入 checked 的判斷式]");
         console.log($(this).prop('checked'))
         $('#txt' + id).css("text-decoration", "none");
-        $(this).prop('checked', false)
+        $('#put' + id).prop('checked', false)
         console.log($(this).prop('checked'))
         num = 0;
         //num = 0;

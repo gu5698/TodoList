@@ -36,14 +36,16 @@ textarea {
     position: absolute;
     margin-left: 56px;
     height: 2.5rem;
-    width: 400px;
+    width: 70%;
+    border-radius: 5px;
     border: none;
 }
 
 #input {
   position: absolute;
-  margin-left: 465px;
+  /* margin-left: 465px; */
   top: 0.5rem;
+  right: 0.5rem;
 }
 
 /* 各行顯示列外框 */
@@ -64,11 +66,11 @@ input {
 
 span {
   position: absolute;
-  width: 400px;
+  width: 70%;
   text-align: center;
 }
 
 ul button {
   position: absolute;
-  left: 461px;
+  right: 0.5rem;
 }
