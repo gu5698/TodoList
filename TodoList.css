@@ -25,20 +25,17 @@ h1{
 #write {
   /* display: block; */
   /* border: 0; */
-  position: relative;
   height: 50px;
 }
 
 /* 左至右三區塊 */
 #sel_id {
-  position: absolute;
   /* margin-left: 13px; */
   top: 0.5rem;
   left: 0.5rem;
 }
 
 textarea {
-    position: absolute;
     margin-left: 15%;
     height: 2.5rem;
     width: 70%;
@@ -47,7 +44,6 @@ textarea {
 }
 
 #input {
-  position: absolute;
   /* margin-left: 465px; */
   top: 0.5rem;
   right: 0.5rem;
@@ -60,7 +56,6 @@ textarea {
 /* 各行外框 */
 ul{
   /* width: 600px; */
-  position: relative;
 }
 
 /* 各行由左至右 */
@@ -70,13 +65,11 @@ input {
 }
 
 span {
-  position: absolute;
   width: 70%;
   margin-left: 7%;
   text-align: center;
 }
 
 ul button {
-  position: absolute;
   right: 0.5rem;
 }
