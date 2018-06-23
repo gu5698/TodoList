@@ -16,6 +16,10 @@ body{
   margin: 0 auto;
 }
 
+h1{
+    text-align: center;
+}
+
 /* 第一行input部分 */
 /* 外框 */
 #write {
@@ -30,11 +34,12 @@ body{
   position: absolute;
   /* margin-left: 13px; */
   top: 0.5rem;
+  left: 0.5rem;
 }
 
 textarea {
     position: absolute;
-    margin-left: 56px;
+    margin-left: 15%;
     height: 2.5rem;
     width: 70%;
     border-radius: 5px;
@@ -60,13 +65,14 @@ ul{
 
 /* 各行由左至右 */
 input {
-  margin-left: -25px;
-  margin-right: 20px;
+    margin-left: -1rem;
+    margin-right: 0.8rem;
 }
 
 span {
   position: absolute;
   width: 70%;
+  margin-left: 7%;
   text-align: center;
 }
 
